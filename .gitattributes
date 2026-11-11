@@ -1,0 +1,16 @@
+# Normalise les fins de ligne : LF partout dans le repo.
+# Important pour les fichiers exécutés sous Linux (Docker) — un CRLF dans
+# setup.sh ou un shebang casserait l'exécution.
+* text=auto eol=lf
+
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+
+# fichiers binaires : pas de conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.webp binary

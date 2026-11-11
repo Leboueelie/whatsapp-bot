@@ -1,0 +1,27 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # `init: true` → un mini-process PID 1 qui transmet proprement SIGTERM à
+    # Node quand Dokploy arrête/redéploie (arrêt propre, libération du lock)
+    init: true
+    env_file:
+      - .env
+    volumes:
+      # volumes nommés : survivent aux redéploiements (git pull + rebuild),
+      # contrairement à un bind-mount dans le dossier du repo
+      - nexus_session:/app/session
+      - nexus_data:/app/data
+      - nexus_tmp:/app/tmp
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  nexus_session:
+  nexus_data:
+  nexus_tmp:

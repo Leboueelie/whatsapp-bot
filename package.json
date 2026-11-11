@@ -1,0 +1,46 @@
+{
+  "name": "nexus-bot",
+  "version": "1.0.0",
+  "description": "NexusBot — Bot WhatsApp personnel tout-en-un (downloader, view-once, modération, stickers)",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "pair": "tsx src/pair.ts",
+    "setup": "bash setup.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "baileys",
+    "session-id",
+    "yt-dlp"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "axios": "^1.7.7",
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.33.5",
+    "yt-search": "^2.12.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/figlet": "^1.5.8",
+    "@types/node": "^22.9.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/qrcode-terminal": "^0.12.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

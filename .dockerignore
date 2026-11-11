@@ -1,0 +1,15 @@
+node_modules/
+dist/
+tmp/
+*.log
+.env
+session/
+session-pair/
+data/
+.DS_Store
+.git/
+.github/
+.gitignore
+.dockerignore
+*.md
+setup.sh

@@ -1,0 +1,23 @@
+# deps & build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# runtime / secrets / state — NE JAMAIS committer
+.env
+session/
+session-pair/
+data/
+tmp/
+*.log
+.nexus.lock
+
+# venv Python éventuel
+venv/
+.venv/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
